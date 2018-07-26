@@ -12,6 +12,11 @@
 		BE9185942105F3270065B02A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9185922105F3270065B02A /* Main.storyboard */; };
 		BE9185962105F3290065B02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9185952105F3290065B02A /* Assets.xcassets */; };
 		BE9185992105F3290065B02A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9185972105F3290065B02A /* LaunchScreen.storyboard */; };
+		BE9185A1210769680065B02A /* CustomSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9185A0210769680065B02A /* CustomSegmentedControl.xib */; };
+		BE9185A3210769B80065B02A /* CustomSegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9185A2210769B80065B02A /* CustomSegmentedControlView.swift */; };
+		BE9185A7210899BB0065B02A /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9185A6210899BB0065B02A /* CustomCollectionViewCell.xib */; };
+		BE9185A9210899C80065B02A /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9185A8210899C80065B02A /* CustomCollectionViewCell.swift */; };
+		BE9185AB2108A4CD0065B02A /* CustomSegmentedControlViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9185AA2108A4CD0065B02A /* CustomSegmentedControlViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		BE9185952105F3290065B02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE9185982105F3290065B02A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE91859A2105F3290065B02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE9185A0210769680065B02A /* CustomSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentedControl.xib; sourceTree = "<group>"; };
+		BE9185A2210769B80065B02A /* CustomSegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControlView.swift; sourceTree = "<group>"; };
+		BE9185A6210899BB0065B02A /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		BE9185A8210899C80065B02A /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		BE9185AA2108A4CD0065B02A /* CustomSegmentedControlViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControlViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,8 @@
 		BE91858D2105F3270065B02A /* FluidInterfaces */ = {
 			isa = PBXGroup;
 			children = (
+				BE9185A52108999E0065B02A /* CollectionView Cell */,
+				BE9185A421076BBB0065B02A /* Component */,
 				BE91858E2105F3270065B02A /* AppDelegate.swift */,
 				BE9185902105F3270065B02A /* ViewController.swift */,
 				BE9185922105F3270065B02A /* Main.storyboard */,
@@ -62,6 +74,25 @@
 				BE91859A2105F3290065B02A /* Info.plist */,
 			);
 			path = FluidInterfaces;
+			sourceTree = "<group>";
+		};
+		BE9185A421076BBB0065B02A /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				BE9185AA2108A4CD0065B02A /* CustomSegmentedControlViewDelegate.swift */,
+				BE9185A2210769B80065B02A /* CustomSegmentedControlView.swift */,
+				BE9185A0210769680065B02A /* CustomSegmentedControl.xib */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		BE9185A52108999E0065B02A /* CollectionView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BE9185A8210899C80065B02A /* CustomCollectionViewCell.swift */,
+				BE9185A6210899BB0065B02A /* CustomCollectionViewCell.xib */,
+			);
+			path = "CollectionView Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +156,8 @@
 				BE9185992105F3290065B02A /* LaunchScreen.storyboard in Resources */,
 				BE9185962105F3290065B02A /* Assets.xcassets in Resources */,
 				BE9185942105F3270065B02A /* Main.storyboard in Resources */,
+				BE9185A7210899BB0065B02A /* CustomCollectionViewCell.xib in Resources */,
+				BE9185A1210769680065B02A /* CustomSegmentedControl.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9185912105F3270065B02A /* ViewController.swift in Sources */,
+				BE9185A3210769B80065B02A /* CustomSegmentedControlView.swift in Sources */,
+				BE9185AB2108A4CD0065B02A /* CustomSegmentedControlViewDelegate.swift in Sources */,
 				BE91858F2105F3270065B02A /* AppDelegate.swift in Sources */,
+				BE9185A9210899C80065B02A /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,14 +316,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JP3JNAQ57T;
 				INFOPLIST_FILE = FluidInterfaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.FluidInterfaces;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.FluidInterfacess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,14 +337,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JP3JNAQ57T;
 				INFOPLIST_FILE = FluidInterfaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.FluidInterfaces;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.FluidInterfacess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
