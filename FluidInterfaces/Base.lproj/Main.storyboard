@@ -20,41 +20,33 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOe-wD-KI3" customClass="CustomSegmentedControlView" customModule="FluidInterfaces" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="40" width="375" height="33"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="ia8-Xv-y2y"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D59-4H-0ZO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vq7-3u-BuG">
                                 <rect key="frame" x="0.0" y="81" width="375" height="586"/>
-                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JSa-CA-f1i">
-                                    <size key="itemSize" width="360" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.56862745100000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="h1b-Ku-Ozg"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jbi-Hr-3Wf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KHk-yK-cer"/>
                                 </connections>
-                            </collectionView>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.96862745100000003" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vq7-3u-BuG" secondAttribute="trailing" id="50Q-dV-bFw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eOe-wD-KI3" secondAttribute="trailing" id="6lF-h1-mPW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D59-4H-0ZO" secondAttribute="bottom" id="DfW-HF-Le4"/>
                             <constraint firstItem="eOe-wD-KI3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ReL-Fi-R0w"/>
-                            <constraint firstItem="D59-4H-0ZO" firstAttribute="top" secondItem="eOe-wD-KI3" secondAttribute="bottom" constant="8" id="gRz-0q-dyG"/>
-                            <constraint firstItem="D59-4H-0ZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jPI-Fx-rht"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D59-4H-0ZO" secondAttribute="trailing" id="mug-qt-qg0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vq7-3u-BuG" secondAttribute="bottom" id="UeX-1r-ReJ"/>
+                            <constraint firstItem="vq7-3u-BuG" firstAttribute="top" secondItem="eOe-wD-KI3" secondAttribute="bottom" constant="8" id="Vvh-yi-FCP"/>
                             <constraint firstItem="eOe-wD-KI3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wIH-Db-dUT"/>
+                            <constraint firstItem="vq7-3u-BuG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xpS-80-1Da"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="D59-4H-0ZO" id="0Hc-QD-K8y"/>
+                        <outlet property="scrollView" destination="vq7-3u-BuG" id="ROu-Qs-Euk"/>
                         <outlet property="segmentedControl" destination="eOe-wD-KI3" id="bqJ-gc-o2v"/>
                     </connections>
                 </viewController>
